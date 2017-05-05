@@ -14,7 +14,7 @@ function checkNumber(number) {
 }
 
 function runGame(number) {
-  if (isNaN(number)) {
+  if (isNaN(number)||(!number)) {
     alert ("Please enter a number");
   } else {
     for (var i = 1; i <= number; i++) {
@@ -27,10 +27,23 @@ function runGame(number) {
 $(function () {
   $("#form").submit(function (event) {
     event.preventDefault();
-    $(".output").contents().remove();
     runGame($("input").val());
+
     gameResults.forEach(function (item) {
-    $(".output").append("<li>" + item + "</li>");
+      $(".output").append("<li>" + item + "</li>");
     });
+
+    $("#play").hide();
+    $("#play-again").show();
+    $("#input").prop("disabled", true);
+  });
+
+  $("#play-again").click(function () {
+    $('#form')[0].reset();
+    $(".output").contents().remove();
+    $("#play").show();
+    $("#input").prop("disabled", false);
+    $("#play-again").hide();
+
   });
 });
