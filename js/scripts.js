@@ -1,14 +1,7 @@
-// function checkNumber(input) {
-//   if (!isNaN(input)) {
-//     return "num";
-//   }
-//   else {
-//     return "not a num";
-//   }
-// }
+var gameResults = [];
 function checkNumber(number) {
+  // number = parseInt(number);
   // debugger;
-  number = parseInt(number);
   if (number%15 == 0) {
     return "ping-pong";
   } else if (number%5 == 0) {
@@ -20,16 +13,24 @@ function checkNumber(number) {
   }
 }
 
-function game(number) {
-  for (var i = 1; i <= number; i++) {
-    // debugger;
-    checkNumber(i);
-    console.log(checkNumber(i));
+function runGame(number) {
+  if (isNaN(number)) {
+    alert ("Please enter a number");
+  } else {
+    for (var i = 1; i <= number; i++) {
+      gameResults.push(checkNumber(i));
+    }
+    return gameResults;
   }
 }
+
 $(function () {
   $("#form").submit(function (event) {
     event.preventDefault();
-    console.log(game("45"));
+    $(".output").contents().remove();
+    runGame($("input").val());
+    gameResults.forEach(function (item) {
+    $(".output").append("<li>" + item + "</li>");
+    });
   });
 });
