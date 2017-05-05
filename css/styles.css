@@ -1,3 +1,33 @@
 #play-again {
   display:none;
 }
+body {
+  font-family: 'Inknut Antiqua', serif;
+  background-color: #e6ffe6;
+}
+.jumbotron {
+  background-color: #bedec0;
+  border: 1px solid black;
+}
+
+.results{
+  margin-top: 27px;
+  padding-left: 35px;
+  font-size: 18px;
+}
+.page-header {
+  border-bottom: 2px solid  #bedec0;
+}
+.btn {
+  background-color:  #bedec0;
+  font-size: 20px;
+}
+.btn:hover {
+  border: 1px solid black;
+}
+.form-control[disabled] {
+  background-color: #bedec0;
+}
+.form-control{
+  font-size: 20px;
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -12,17 +12,36 @@
   </head>
   <body>
     <div class="container">
-      <form id="form" action="index.html" method="post">
-        <div class="form-group">
-          <label>Enter a number:</label>
-          <input id="input" type="text" value="">
+      <div class="jumbotron">
+        <h1>Let's play Ping-Pong</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <form id="form" action="index.html" method="post">
+            <div class="form-group">
+              <label><h3>Enter a number:</h3></label>
+              <input id="input" class="form-control" type="text" value="">
+            </div>
+            <button id="play" class="btn" type="submit" name="button">Play</button>
+          </form>
+          <button id="play-again" class="btn" type="button" name="button">Play again!</button>
         </div>
-        <button id="play" class="btn" type="submit" name="button">Play</button>
-      </form>
-      <button id="play-again" class="btn" type="button" name="button">Play again!</button>
-    </div>
-    <ul class="output">
+        <div class="col-md-3">
+          <div class="results">
+            <ul id="output" class="list-group"></ul>
+          </div>
+        </div>
+        <div class="col-md-1">
 
-    </ul>
+        </div>
+        <div class="col-md-5">
+          <div class="page-header">
+            <h2>About ping pong</h2>
+          </div>
+          <p>Table tennis, also known as ping pong, is a sport in which two or four players hit a lightweight ball back and forth across a table using a small bat. The game takes place on a hard table divided by a net. Except for the initial serve, the rules are generally as follows: players must allow a ball played toward them to bounce one time on their side of the table, and must return it so that it bounces on the opposite side at least once. A point is scored when a player fails to return the ball within the rules. Play is fast and demands quick reactions. Spinning the ball alters its trajectory and limits an opponent's options, giving the hitter a great advantage.</p>
+          <p>The sport originated in Victorian England, where it was played among the upper-class as an after-dinner parlour game. It has been suggested that makeshift versions of the game were developed by British military officers in India in around 1860s or 1870s, who brought it back with them. A row of books stood up along the center of the table as a net, two more books served as rackets and were used to continuously hit a golf-ball. It had several different names, including 'whiff-whaff'. The name "ping-pong" was in wide use before British manufacturer J. Jaques Son Ltd trademarked it in 1901. The name "ping-pong" then came to describe the game played using the rather expensive Jaques's equipment, with other manufacturers calling it table tennis. A similar situation arose in the United States, where Jaques sold the rights to the "ping-pong" name to Parker Brothers. Parker Brothers then enforced its trademark for the term in the 1920s making the various associations change their names to "table tennis" instead of the more common, but trademarked, term.</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
