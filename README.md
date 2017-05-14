@@ -2,11 +2,13 @@
 ## May 5 2017 By Olena Kuchko
 
 ## Specs
-  - The user Input is a number
-  - App can count up to the provided number
-  - Number which divisible by 3 is replaced with "ping"
-  - Number which divisible by 5 is replaced with "pong"
-  - Number which divisible by 15 is replaced with "ping-pong"
+| Behavior | Input | Output |
+|----------|-------|--------|
+|The users' Input is a number|any Integer|app runs according its code|
+|App can count up to the provided number|ex: 4|1, 2, ping, 4|
+|Number which divisible by 3 is replaced with "ping"|3|1, 2, ping|
+|Number which divisible by 5 is replaced with "pong"|5|1, 2, ping, 4, pong|
+|Number which divisible by 15 is replaced with "ping-pong"|16|1,2,ping ... 14, ping-pong,16|
 
 ##Description
 This is a mini-game. User should enter a number. The app returns a range of numbers from 1 to the chosen number.
